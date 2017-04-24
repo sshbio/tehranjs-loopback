@@ -34,5 +34,13 @@
   "Role": {
     "dataSource": "grocery",
     "public": false
+  },
+  "product": {
+    "dataSource": "grocery",
+    "public": true
+  },
+  "producer": {
+    "dataSource": "grocery",
+    "public": true
   }
 }
