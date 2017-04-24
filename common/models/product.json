@@ -23,7 +23,12 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "producer":{
+      "type": "belongsTo",
+      "model": "producer"
+    }
+  },
   "acls": [],
   "methods": {}
 }
