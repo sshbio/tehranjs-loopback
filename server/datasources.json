@@ -1,6 +1,17 @@
 {
-  "db": {
-    "name": "db",
-    "connector": "memory"
+  "grocery": {
+    "host": "localhost",
+    "port": 27017,
+    "name": "grocery",
+    "connector": "mongodb"
+  },
+  "transactions": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "transactions",
+    "password": "123456",
+    "name": "transactions",
+    "user": "postgres",
+    "connector": "postgresql"
   }
 }

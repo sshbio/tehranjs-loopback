@@ -14,25 +14,25 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "grocery"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "grocery",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "grocery",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "grocery",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "grocery",
     "public": false
   }
 }
