@@ -27,6 +27,14 @@
       "foreignKey":"producerId"
     }
   },
-  "acls": [],
+  "acls": [{
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": [
+        "__get__products"
+      ]}
+    ],
   "methods": {}
 }
