@@ -29,6 +29,15 @@
       "model": "producer"
     }
   },
-  "acls": [],
+  "acls": [{
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "basket",
+        "interest"
+      ]
+    }],
   "methods": {}
 }

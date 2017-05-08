@@ -2,7 +2,7 @@
 
 module.exports = function(Products) {
 
-	// defining a remote method as get
+	// defining a remote method as gett
 	Products.basket = function(req,cb){
 		cb(null,{
 			hello:'from get remoteMethod'
