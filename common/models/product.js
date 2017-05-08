@@ -15,9 +15,16 @@ module.exports = function(Products) {
 
 	Products.afterRemote('basket',function(ctx,ins,next){
 		ctx.result.ehem = 'from after remoteMethod';
-		next()
+		next();
 	})
-	
+
+
+	Products.observe('before save',function(ctx,next){
+		if(!ctx.isNewInstance){
+			ctx.instance.updated = new Date();
+		}
+		next();
+	});
 	// defining a remote method as get
 	Products.basket = function(req,cb){
 		cb(null,{
