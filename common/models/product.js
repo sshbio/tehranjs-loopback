@@ -2,12 +2,29 @@
 
 module.exports = function(Products) {
 
-	// defining a remote method as gett
+	Products.beforeRemote('find',function(ctx,ins,next){
+		// console.log(ctx.args)
+		if(!ctx.args.filter){
+			var error = new Error('simple error');
+			error.statusCode = 422;
+			error.code = 'SIMPLE_ERROR_HAPPEND';
+			return next(error);
+		}
+		next();
+	})
+
+	Products.afterRemote('basket',function(ctx,ins,next){
+		ctx.result.ehem = 'from after remoteMethod';
+		next()
+	})
+	
+	// defining a remote method as get
 	Products.basket = function(req,cb){
 		cb(null,{
 			hello:'from get remoteMethod'
 		})
 	}
+
 	Products.remoteMethod(
 		'basket',
 		{
